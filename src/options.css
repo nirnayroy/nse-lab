@@ -1,0 +1,158 @@
+.instrument-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 550px;
+  margin-bottom: 8px;
+}
+
+.instrument-label label {
+  margin: 0;
+}
+
+.asset-tabs {
+  display: flex;
+  gap: 3px;
+}
+
+.asset-tabs button {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  padding: 3px 7px;
+  font: 7px var(--mono);
+  cursor: pointer;
+}
+
+.asset-tabs button.active {
+  background: var(--acid);
+  color: var(--ink);
+}
+
+.search-results .empty-result {
+  padding: 18px 13px;
+  color: var(--muted);
+  font: 8px/1.5 var(--mono);
+}
+
+.contract-strip {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  border: 1px solid var(--line);
+  border-top: 0;
+  background: #0b1512;
+}
+
+.contract-strip span {
+  padding: 10px 14px;
+  border-right: 1px solid var(--line);
+  color: var(--muted);
+  font: 7px var(--mono);
+}
+
+.contract-strip span:last-child {
+  border-right: 0;
+}
+
+.contract-strip b {
+  display: block;
+  margin-top: 4px;
+  color: #fff;
+  font-size: 9px;
+}
+
+@media (max-width: 720px) {
+  .contract-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contract-strip span {
+    border-bottom: 1px solid var(--line);
+  }
+}
+
+.custom-rules {
+  margin: 4px 0 20px;
+  border-top: 1px solid var(--line);
+}
+
+.strategy-builder.custom {
+  grid-column: 1 / -1;
+}
+
+.rule-group {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.rule-group-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: var(--acid);
+  font: 8px var(--mono);
+}
+
+.rule-group-head label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 7px;
+}
+
+.rule-group-head select,
+.rule-row select,
+.rule-row input {
+  min-width: 0;
+  border: 1px solid var(--line);
+  background: #101c18;
+  color: #fff;
+  padding: 8px;
+  font: 8px var(--mono);
+  outline: none;
+}
+
+.rule-row {
+  display: grid;
+  grid-template-columns: 20px minmax(90px,1fr) 54px minmax(105px,1.1fr) minmax(90px,1fr) 58px 25px;
+  gap: 5px;
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+.rule-row > span {
+  color: var(--muted);
+  font: 8px var(--mono);
+}
+
+.rule-row > button,
+.add-rule {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font: 10px var(--mono);
+}
+
+.rule-row > button {
+  height: 31px;
+}
+
+.add-rule {
+  padding: 7px 10px;
+  color: var(--mint);
+  font-size: 7px;
+}
+
+.rule-row select:focus,
+.rule-row input:focus {
+  border-color: var(--acid);
+}
+
+@media (max-width: 1100px) {
+  .rule-row {
+    grid-template-columns: 20px 1fr 54px 1fr;
+  }
+}
